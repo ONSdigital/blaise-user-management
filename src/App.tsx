@@ -20,6 +20,7 @@ import {getAllUsers} from "./utilities/http";
 
 import {NotProductionWarning, Footer, Header, ONSPanel, BetaBanner} from "blaise-design-system-react-components";
 import Roles from "./pages/Roles";
+import BulkUserUpload from "./pages/BulkUserUpload/BulkUserUpload";
 
 interface Panel {
     visible: boolean
@@ -67,6 +68,7 @@ function App(): ReactElement {
     function PrivateRoute({children, ...rest}) {
         return (
             <Route
+                exact
                 {...rest}
                 render={({location}) =>
                     authentication !== null ? (
@@ -120,6 +122,9 @@ function App(): ReactElement {
                     </ONSPanel>
                     <DefaultErrorBoundary>
                         <Switch>
+                            <PrivateRoute path={"/user/upload"}>
+                                <BulkUserUpload/>
+                            </PrivateRoute>
                             <PrivateRoute path={"/user/changepassword/:user"}>
                                 <ChangePassword/>
                             </PrivateRoute>

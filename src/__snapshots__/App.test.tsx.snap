@@ -134,6 +134,15 @@ Object {
               class="list__item "
             >
               <a
+                href="/user/upload"
+              >
+                Bulk upload users
+              </a>
+            </li>
+            <li
+              class="list__item "
+            >
+              <a
                 href="/roles"
               >
                 Manage roles
@@ -435,6 +444,15 @@ Object {
               href="/user"
             >
               Create new user
+            </a>
+          </li>
+          <li
+            class="list__item "
+          >
+            <a
+              href="/user/upload"
+            >
+              Bulk upload users
             </a>
           </li>
           <li
@@ -805,6 +823,15 @@ Object {
               class="list__item "
             >
               <a
+                href="/user/upload"
+              >
+                Bulk upload users
+              </a>
+            </li>
+            <li
+              class="list__item "
+            >
+              <a
                 href="/roles"
               >
                 Manage roles
@@ -1106,6 +1133,15 @@ Object {
               href="/user"
             >
               Create new user
+            </a>
+          </li>
+          <li
+            class="list__item "
+          >
+            <a
+              href="/user/upload"
+            >
+              Bulk upload users
             </a>
           </li>
           <li

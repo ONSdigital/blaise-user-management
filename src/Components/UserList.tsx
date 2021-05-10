@@ -49,6 +49,11 @@ function UserList(props: Props): ReactElement {
                 </Link>
             </li>
             <li className="list__item ">
+                <Link to={"/user/upload"}>
+                    Bulk upload users
+                </Link>
+            </li>
+            <li className="list__item ">
                 <Link to={"/roles"}>
                     Manage roles
                 </Link>
