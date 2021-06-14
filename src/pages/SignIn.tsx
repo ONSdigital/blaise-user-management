@@ -35,7 +35,9 @@ function SignIn(props: Props): ReactElement {
     async function signIn(formData: FormData) {
         setButtonLoading(true);
 
-        const [success, user] = await loginUser(formData.username, formData.password);
+        // TODO: Removed before better implementation is created
+        // const [success, user] = await loginUser(formData.username, formData.password);
+        const [success, user] = simpleAuth(formData.username);
 
         if (!success) {
             setButtonLoading(false);
@@ -53,11 +55,12 @@ function SignIn(props: Props): ReactElement {
         setRedirect(true);
     }
 
-    function loginAnyway(){
-        setAuthenticatedUser({defaultServerPark: "", name: "TEST_ENV", password: "", role: "", serverParks: []});
-        setRedirect(true);
+    function simpleAuth(username: string): [boolean, User | null] {
+        if (username === "Blaise") {
+            return [true, {defaultServerPark: "", name: "Blaise User", password: "", role: "DST", serverParks: []}];
+        }
+        return [false, null];
     }
-
 
     return (
         <>
@@ -66,8 +69,7 @@ function SignIn(props: Props): ReactElement {
             }
             <h1 className="u-mt-m">Sign in</h1>
 
-            {/* TODO Remove the "Sign in anyway" as this just bypasses the Auth*/}
-            {(message !== "" && <ONSPanel status={"error"}>{message} <Link to={"/"} onClick={loginAnyway}>Sign in anyway</Link> </ONSPanel>)}
+            {(message !== "" && <ONSPanel status={"error"}>{message} </ONSPanel>)}
 
             <Form onSubmit={(data) => signIn(data)}>
 
