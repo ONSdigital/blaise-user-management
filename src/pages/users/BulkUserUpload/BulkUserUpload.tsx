@@ -1,8 +1,8 @@
 import React, {ReactElement, useState} from "react";
-import {ImportUser, UploadedUser, User} from "../../../Interfaces";
+import {ImportUser, UploadedUser, User} from "../../../../Interfaces";
 import UsersToUploadSummary from "./UsersToUploadSummary";
 import SelectFile from "./SelectFile";
-import {addNewUser} from "../../utilities/http";
+import {addNewUser} from "../../../utilities/http";
 import UsersUploadedSummary from "./UsersUploadedSummary";
 
 function BulkUserUpload(): ReactElement {
