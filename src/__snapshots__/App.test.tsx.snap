@@ -65,7 +65,7 @@ Object {
                     <img
                       alt="Office for National Statistics logo"
                       class="header__logo"
-                      src="https://ons-design-system.netlify.app/img/ons-logo-neg-en.svg"
+                      src="https://cdn.ons.gov.uk/sdc/design-system/31.4.0/img/ons-logo-neg-en.svg"
                     />
                   </picture>
                 </a>
@@ -136,7 +136,7 @@ Object {
             hidden=""
           >
             <div
-              class="panel__body"
+              class="panel__body "
             >
               <p />
             </div>
@@ -149,7 +149,7 @@ Object {
           <p>
             Signed in with user 
             <em>
-              TestUser123
+              Blaise User
             </em>
              with role 
             <em>
@@ -347,7 +347,7 @@ Object {
                   <img
                     alt="Office for National Statistics logo"
                     class="header__logo"
-                    src="https://ons-design-system.netlify.app/img/ons-logo-neg-en.svg"
+                    src="https://cdn.ons.gov.uk/sdc/design-system/31.4.0/img/ons-logo-neg-en.svg"
                   />
                 </picture>
               </a>
@@ -418,7 +418,7 @@ Object {
           hidden=""
         >
           <div
-            class="panel__body"
+            class="panel__body "
           >
             <p />
           </div>
@@ -431,7 +431,7 @@ Object {
         <p>
           Signed in with user 
           <em>
-            TestUser123
+            Blaise User
           </em>
            with role 
           <em>
