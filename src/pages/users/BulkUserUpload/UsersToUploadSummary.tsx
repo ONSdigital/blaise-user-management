@@ -1,7 +1,7 @@
 import React, {ReactElement, useEffect, useState} from "react";
 import {ONSPanel} from "blaise-design-system-react-components";
-import {ImportUser} from "../../../Interfaces";
-import {ErrorBoundary} from "../../Components/ErrorHandling/ErrorBoundary";
+import {ImportUser} from "../../../../Interfaces";
+import {ErrorBoundary} from "../../../Components/ErrorHandling/ErrorBoundary";
 import Confirmation from "./Confirmation";
 import converter from "number-to-words";
 

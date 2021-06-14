@@ -21,7 +21,7 @@ function Confirmation({validUsers, uploadUsers}: Props): ReactElement {
             return;
         }
         if (!confirm) {
-            history.push("/");
+            history.push("/users");
             return;
         }
 
@@ -65,7 +65,7 @@ function Confirmation({validUsers, uploadUsers}: Props): ReactElement {
                     label={"Cancel"}
                     primary={false}
                     id="cancel-overwrite"
-                    onClick={() => history.push("/")}/>
+                    onClick={() => history.push("/users")}/>
                 }
             </form>
         </>
