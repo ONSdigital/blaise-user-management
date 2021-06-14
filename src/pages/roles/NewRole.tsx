@@ -63,10 +63,10 @@ function NewRole(): ReactElement {
                 <ONSTextInput label={"Name"}
                               autoFocus={true}
                               value={name}
-                              onChange={(e) => setName(e.target.value)}/>
+                              onChange={(e) => setName(e.target.value)} zIndex={0}/>
                 <ONSTextInput label={"Description"}
                               value={description}
-                              onChange={(e) => setDescription(e.target.value)}/>
+                              onChange={(e) => setDescription(e.target.value)} zIndex={0}/>
                 <ONSButton
                     label={"Save"}
                     primary={true}

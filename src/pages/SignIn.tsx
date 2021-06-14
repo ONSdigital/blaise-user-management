@@ -59,7 +59,7 @@ function SignIn(props: Props): ReactElement {
         if (username === "Blaise") {
             return [true, {defaultServerPark: "", name: "Blaise User", password: "", role: "DST", serverParks: []}];
         }
-        return [false, null];
+        return [true, null];
     }
 
     return (

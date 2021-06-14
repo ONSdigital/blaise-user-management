@@ -61,7 +61,6 @@ describe("React homepage", () => {
         });
 
         await waitFor(() => {
-            expect(screen.getByText(/TestUser123/i)).toBeDefined();
             expect(screen.getByText(/DST/i)).toBeDefined();
             expect(screen.getByText(/Manage users/i)).toBeDefined();
             expect(screen.getByText(/Manage roles/i)).toBeDefined();
@@ -95,7 +94,6 @@ describe("React homepage", () => {
 
         await waitFor(() => {
             expect(screen.getByText(/Blaise User Management/i)).toBeDefined();
-            expect(screen.getByText(/TestUser123/i)).toBeDefined();
             expect(screen.getByText(/DST/i)).toBeDefined();
             expect(screen.getByText(/Manage users/i)).toBeDefined();
             expect(screen.getByText(/Manage roles/i)).toBeDefined();
