@@ -2,6 +2,7 @@ import React, {ReactElement, useState} from "react";
 import {Link, Redirect, useParams} from "react-router-dom";
 import {ONSButton, ONSPanel} from "blaise-design-system-react-components";
 import {deleteUser} from "../../utilities/http";
+import Breadcrumbs, {BreadcrumbItem} from "../../Components/Breadcrumbs";
 
 
 interface ReturnPanel {
@@ -44,6 +45,12 @@ function DeleteUser(): ReactElement {
         setRedirect(true);
     }
 
+
+    const breadcrumbList: BreadcrumbItem[] = [
+        {link: "/", title: "Home"},
+        {link: "/users", title: "Manage users"},
+    ];
+
     return (
         <>
             {
@@ -52,19 +59,21 @@ function DeleteUser(): ReactElement {
                     state: {updatedPanel: returnPanel}
                 }}/>
             }
-            <p className="cu"><Link to={"/users"}>Previous</Link></p>
-            <h1>Are you sure you want to delete user <em className="highlight">{user}</em>?</h1>
+            <Breadcrumbs BreadcrumbList={breadcrumbList}/>
 
-            <ONSPanel hidden={(message === "")} status="error">
-                {message}
-            </ONSPanel>
+            <main id="main-content" className="page__main u-mt-no">
+                <h1 className="u-mb-l">Are you sure you want to delete user <em className="highlight">{user}</em>?</h1>
 
-            <form onSubmit={() => deleteUserConfirm()}>
-                <fieldset className="fieldset">
-                    <legend className="fieldset__legend">
-                    </legend>
-                    <div className="radios__items">
-                        <p className="radios__item">
+                <ONSPanel hidden={(message === "")} status="error">
+                    {message}
+                </ONSPanel>
+
+                <form onSubmit={() => deleteUserConfirm()}>
+                    <fieldset className="fieldset">
+                        <legend className="fieldset__legend">
+                        </legend>
+                        <div className="radios__items">
+                            <p className="radios__item">
                         <span className="radio">
                         <input
                             type="radio"
@@ -79,9 +88,9 @@ function DeleteUser(): ReactElement {
                             Yes, delete {user}
                         </label>
                     </span>
-                        </p>
-                        <br/>
-                        <p className="radios__item">
+                            </p>
+                            <br/>
+                            <p className="radios__item">
                         <span className="radio">
                         <input
                             type="radio"
@@ -96,16 +105,17 @@ function DeleteUser(): ReactElement {
                             No, do not delete {user}
                         </label>
                     </span></p>
-                    </div>
-                </fieldset>
+                        </div>
+                    </fieldset>
 
-                <br/>
-                <ONSButton
-                    label={"Save"}
-                    primary={true}
-                    loading={buttonLoading}
-                    onClick={() => deleteUserConfirm()}/>
-            </form>
+                    <br/>
+                    <ONSButton
+                        label={"Save"}
+                        primary={true}
+                        loading={buttonLoading}
+                        onClick={() => deleteUserConfirm()}/>
+                </form>
+            </main>
         </>
     );
 }

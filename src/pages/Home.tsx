@@ -1,6 +1,6 @@
 import React, {ReactElement} from "react";
 import {User} from "../../Interfaces";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 interface Props {
     user: User
@@ -9,10 +9,9 @@ interface Props {
 function Home({user}: Props): ReactElement {
     return (
         <>
-            <h1 className="u-mt-m">User Management</h1>
-            <p>Signed in with user <em>{user?.name}</em> with role <em>{user?.role}</em>.</p>
-
-            <div className="container u-mt-l">
+            <main id="main-content" className="page__main">
+                <h1 className="u-mt-m">User Management</h1>
+                <p>Signed in with user <em>{user?.name}</em> with role <em>{user?.role}</em>.</p>
                 <div className="grid grid--column@xxs@s">
                     <div className="grid__col col-6@m">
                         <div className="card" aria-labelledby="title1" aria-describedby="text1">
@@ -38,9 +37,9 @@ function Home({user}: Props): ReactElement {
                             <p id="text2">View, create and edit roles in Blaise.</p>
                             <ul className="list list--dashed">
                                 <li className="list__item ">
-                                <Link to="/roles/new" className="list__link ">Create new role</Link>
-                            </li>
-                        </ul>
+                                    <Link to="/roles/new" className="list__link ">Create new role</Link>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     {/*<div className="grid__col col-4@m">*/}
@@ -58,7 +57,9 @@ function Home({user}: Props): ReactElement {
                     {/*    </div>*/}
                     {/*</div>*/}
                 </div>
-            </div>
+            </main>
+
+
         </>
     );
 }
