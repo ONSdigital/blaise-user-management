@@ -127,20 +127,20 @@ Object {
         class="page__container container"
         style="min-height: calc(67vh);"
       >
+        <div
+          class="panel panel--info panel--no-title  u-mt-m"
+          hidden=""
+        >
+          <div
+            class="panel__body "
+          >
+            <p />
+          </div>
+        </div>
         <main
           class="page__main"
           id="main-content"
         >
-          <div
-            class="panel panel--info panel--no-title  u-mt-m"
-            hidden=""
-          >
-            <div
-              class="panel__body "
-            >
-              <p />
-            </div>
-          </div>
           <h1
             class="u-mt-m"
           >
@@ -158,98 +158,94 @@ Object {
             .
           </p>
           <div
-            class="container u-mt-l"
+            class="grid grid--column@xxs@s"
           >
             <div
-              class="grid grid--column@xxs@s"
+              class="grid__col col-6@m"
             >
               <div
-                class="grid__col col-6@m"
+                aria-describedby="text1"
+                aria-labelledby="title1"
+                class="card"
               >
-                <div
-                  aria-describedby="text1"
-                  aria-labelledby="title1"
-                  class="card"
+                <h2
+                  class="u-fs-m"
+                  id="title1"
                 >
-                  <h2
-                    class="u-fs-m"
-                    id="title1"
+                  <a
+                    href="/users"
+                  >
+                    Manage users
+                  </a>
+                </h2>
+                <p
+                  id="text1"
+                >
+                  View, create and edit users in Blaise.
+                </p>
+                <ul
+                  class="list list--dashed"
+                >
+                  <li
+                    class="list__item "
                   >
                     <a
-                      href="/users"
+                      class="list__link "
+                      href="/user/new"
                     >
-                      Manage users
+                      Create new user
                     </a>
-                  </h2>
-                  <p
-                    id="text1"
+                  </li>
+                  <li
+                    class="list__item "
                   >
-                    View, create and edit users in Blaise.
-                  </p>
-                  <ul
-                    class="list list--dashed"
-                  >
-                    <li
-                      class="list__item "
+                    <a
+                      class="list__link "
+                      href="/user/upload"
                     >
-                      <a
-                        class="list__link "
-                        href="/user/new"
-                      >
-                        Create new user
-                      </a>
-                    </li>
-                    <li
-                      class="list__item "
-                    >
-                      <a
-                        class="list__link "
-                        href="/user/upload"
-                      >
-                        Bulk upload users
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                      Bulk upload users
+                    </a>
+                  </li>
+                </ul>
               </div>
+            </div>
+            <div
+              class="grid__col col-6@m"
+            >
               <div
-                class="grid__col col-6@m"
+                aria-describedby="text2"
+                aria-labelledby="title2"
+                class="card"
               >
-                <div
-                  aria-describedby="text2"
-                  aria-labelledby="title2"
-                  class="card"
+                <h2
+                  class="u-fs-m"
+                  id="title2"
                 >
-                  <h2
-                    class="u-fs-m"
-                    id="title2"
+                  <a
+                    href="/roles"
+                  >
+                    Manage roles
+                  </a>
+                </h2>
+                <p
+                  id="text2"
+                >
+                  View, create and edit roles in Blaise.
+                </p>
+                <ul
+                  class="list list--dashed"
+                >
+                  <li
+                    class="list__item "
                   >
                     <a
-                      href="/roles"
+                      class="list__link "
+                      href="/roles/new"
                     >
-                      Manage roles
+                      Create new role
                     </a>
-                  </h2>
-                  <p
-                    id="text2"
-                  >
-                    View, create and edit roles in Blaise.
-                  </p>
-                  <ul
-                    class="list list--dashed"
-                  >
-                    <li
-                      class="list__item "
-                    >
-                      <a
-                        class="list__link "
-                        href="/roles/new"
-                      >
-                        Create new role
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -409,20 +405,20 @@ Object {
       class="page__container container"
       style="min-height: calc(67vh);"
     >
+      <div
+        class="panel panel--info panel--no-title  u-mt-m"
+        hidden=""
+      >
+        <div
+          class="panel__body "
+        >
+          <p />
+        </div>
+      </div>
       <main
         class="page__main"
         id="main-content"
       >
-        <div
-          class="panel panel--info panel--no-title  u-mt-m"
-          hidden=""
-        >
-          <div
-            class="panel__body "
-          >
-            <p />
-          </div>
-        </div>
         <h1
           class="u-mt-m"
         >
@@ -440,98 +436,94 @@ Object {
           .
         </p>
         <div
-          class="container u-mt-l"
+          class="grid grid--column@xxs@s"
         >
           <div
-            class="grid grid--column@xxs@s"
+            class="grid__col col-6@m"
           >
             <div
-              class="grid__col col-6@m"
+              aria-describedby="text1"
+              aria-labelledby="title1"
+              class="card"
             >
-              <div
-                aria-describedby="text1"
-                aria-labelledby="title1"
-                class="card"
+              <h2
+                class="u-fs-m"
+                id="title1"
               >
-                <h2
-                  class="u-fs-m"
-                  id="title1"
+                <a
+                  href="/users"
+                >
+                  Manage users
+                </a>
+              </h2>
+              <p
+                id="text1"
+              >
+                View, create and edit users in Blaise.
+              </p>
+              <ul
+                class="list list--dashed"
+              >
+                <li
+                  class="list__item "
                 >
                   <a
-                    href="/users"
+                    class="list__link "
+                    href="/user/new"
                   >
-                    Manage users
+                    Create new user
                   </a>
-                </h2>
-                <p
-                  id="text1"
+                </li>
+                <li
+                  class="list__item "
                 >
-                  View, create and edit users in Blaise.
-                </p>
-                <ul
-                  class="list list--dashed"
-                >
-                  <li
-                    class="list__item "
+                  <a
+                    class="list__link "
+                    href="/user/upload"
                   >
-                    <a
-                      class="list__link "
-                      href="/user/new"
-                    >
-                      Create new user
-                    </a>
-                  </li>
-                  <li
-                    class="list__item "
-                  >
-                    <a
-                      class="list__link "
-                      href="/user/upload"
-                    >
-                      Bulk upload users
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                    Bulk upload users
+                  </a>
+                </li>
+              </ul>
             </div>
+          </div>
+          <div
+            class="grid__col col-6@m"
+          >
             <div
-              class="grid__col col-6@m"
+              aria-describedby="text2"
+              aria-labelledby="title2"
+              class="card"
             >
-              <div
-                aria-describedby="text2"
-                aria-labelledby="title2"
-                class="card"
+              <h2
+                class="u-fs-m"
+                id="title2"
               >
-                <h2
-                  class="u-fs-m"
-                  id="title2"
+                <a
+                  href="/roles"
+                >
+                  Manage roles
+                </a>
+              </h2>
+              <p
+                id="text2"
+              >
+                View, create and edit roles in Blaise.
+              </p>
+              <ul
+                class="list list--dashed"
+              >
+                <li
+                  class="list__item "
                 >
                   <a
-                    href="/roles"
+                    class="list__link "
+                    href="/roles/new"
                   >
-                    Manage roles
+                    Create new role
                   </a>
-                </h2>
-                <p
-                  id="text2"
-                >
-                  View, create and edit roles in Blaise.
-                </p>
-                <ul
-                  class="list list--dashed"
-                >
-                  <li
-                    class="list__item "
-                  >
-                    <a
-                      class="list__link "
-                      href="/roles/new"
-                    >
-                      Create new role
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

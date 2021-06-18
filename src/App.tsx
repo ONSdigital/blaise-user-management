@@ -129,53 +129,53 @@ function App(): ReactElement {
                 (window.location.hostname.includes("dev")) && <NotProductionWarning/>
             }
             <BetaBanner/>
-            <Header title={"Blaise User Management"} signOutButton={userAuthenticated} signOutFunction={() => signOutUser()}/>
+            <Header title={"Blaise User Management"} signOutButton={userAuthenticated}
+                    signOutFunction={() => signOutUser()}/>
             <div style={divStyle} className="page__container container">
-                <main id="main-content" className="page__main">
-                    <ONSPanel hidden={!panel.visible} status={panel.status}>
-                        <p>{panel.message}</p>
-                    </ONSPanel>
-                    <DefaultErrorBoundary>
-                        <Switch>
-                            <PrivateRoute path={"/user/upload"}>
-                                <BulkUserUpload/>
-                            </PrivateRoute>
-                            <PrivateRoute path={"/user/changepassword/:user"}>
-                                <ChangePassword/>
-                            </PrivateRoute>
-                            <PrivateRoute path={"/user/delete/:user"}>
-                                <DeleteUser/>
-                            </PrivateRoute>
-                            <PrivateRoute path={"/user"}>
-                                <NewUser/>
-                            </PrivateRoute>
-                            <PrivateRoute path={"/roles/new"}>
-                                <NewRole/>
-                            </PrivateRoute>
-                            <PrivateRoute path={"/roles"}>
-                                <ErrorBoundary errorMessageText={"Unable to load role table correctly."}>
-                                    <Roles/>
-                                </ErrorBoundary>
-                            </PrivateRoute>
-                            <Route path="/signin">
-                                <ErrorBoundary errorMessageText={"Unable to load survey table correctly."}>
-                                    <SignIn setAuthenticatedUser={loginUser}/>
-                                </ErrorBoundary>
-                            </Route>
-                            <PrivateRoute path="/users">
-                                <ErrorBoundary errorMessageText={"Unable to load user table correctly."}>
-                                    <Users currentUser={authenticatedUser}
-                                           externalCATIUrl={externalCATIUrl}/>
-                                </ErrorBoundary>
-                            </PrivateRoute>
-                            <PrivateRoute path="/">
+
+                <ONSPanel hidden={!panel.visible} status={panel.status}>
+                    <p>{panel.message}</p>
+                </ONSPanel>
+                <DefaultErrorBoundary>
+                    <Switch>
+                        <PrivateRoute path={"/user/upload"}>
+                            <BulkUserUpload/>
+                        </PrivateRoute>
+                        <PrivateRoute path={"/user/changepassword/:user"}>
+                            <ChangePassword/>
+                        </PrivateRoute>
+                        <PrivateRoute path={"/user/delete/:user"}>
+                            <DeleteUser/>
+                        </PrivateRoute>
+                        <PrivateRoute path={"/user"}>
+                            <NewUser/>
+                        </PrivateRoute>
+                        <PrivateRoute path={"/roles/new"}>
+                            <NewRole/>
+                        </PrivateRoute>
+                        <PrivateRoute path={"/roles"}>
+                            <ErrorBoundary errorMessageText={"Unable to load role table correctly."}>
+                                <Roles/>
+                            </ErrorBoundary>
+                        </PrivateRoute>
+                        <Route path="/signin">
+                            <ErrorBoundary errorMessageText={"Unable to load survey table correctly."}>
+                                <SignIn setAuthenticatedUser={loginUser}/>
+                            </ErrorBoundary>
+                        </Route>
+                        <PrivateRoute path="/users">
+                            <ErrorBoundary errorMessageText={"Unable to load user table correctly."}>
+                                <Users currentUser={authenticatedUser}
+                                       externalCATIUrl={externalCATIUrl}/>
+                            </ErrorBoundary>
+                        </PrivateRoute>
+                        <PrivateRoute path="/">
                             <ErrorBoundary errorMessageText={"Unable to load user table correctly."}>
                                 <Home user={authenticatedUser}/>
                             </ErrorBoundary>
                         </PrivateRoute>
-                        </Switch>
-                    </DefaultErrorBoundary>
-                </main>
+                    </Switch>
+                </DefaultErrorBoundary>
             </div>
             <Footer/>
         </>
